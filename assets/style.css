@@ -56,3 +56,13 @@ header {
   background-color: rgb(2, 2, 92);
 }
 /* QUIZ PAGE */
+.quiz-page1,
+.quiz-page2,
+.quiz-page3,
+.quiz-page4,
+.quiz-page5 {
+  text-align: center;
+}
+.quiz-title {
+  font-size: 40px;
+}

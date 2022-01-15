@@ -2,18 +2,52 @@
 let timer = 75;
 let stopper = -1;
 let startBtn = document.getElementById("startBtn");
-let startScreen = document.getElementById("startPage");
-let quizScreen = document.getElementById("quizPage");
 
-quizScreen.style.display = "none";
+let startScreen = document.getElementById("startPage");
+    // QUIZ SCREEN ONE ELEMENT WITH SCREEN ONE BUTTONS
+let quizScreen1 = document.getElementById("quizPage1");
+    let button11 = document.getElementById("quiz1.1Btn")
+    let button12 = document.getElementById("quiz1.2Btn")
+    let button13 = document.getElementById("quiz1.3Btn")
+    let button14 = document.getElementById("quiz1.4Btn")
+     // QUIZ SCREEN TWO ELEMENT WITH SCREEN TWO BUTTONS
+let quizScreen2 = document.getElementById("quizPage2");
+    let button21 = document.getElementById("quiz2.1Btn")
+    let button22 = document.getElementById("quiz2.2Btn")
+    let button23 = document.getElementById("quiz2.3Btn")
+    let button24 = document.getElementById("quiz2.4Btn")
+     // QUIZ SCREEN THREE ELEMENT WITH SCREEN THREE BUTTONS
+let quizScreen3 = document.getElementById("quizPage3");
+let button31 = document.getElementById("quiz3.1Btn")
+let button32 = document.getElementById("quiz3.2Btn")
+let button33 = document.getElementById("quiz3.3Btn")
+let button34 = document.getElementById("quiz3.4Btn")
+     // QUIZ SCREEN FOUR ELEMENT WITH SCREEN FOUR BUTTONS
+let quizScreen4 = document.getElementById("quizPage4");
+    let button41 = document.getElementById("quiz4.1Btn")
+    let button42 = document.getElementById("quiz4.2Btn")
+    let button43 = document.getElementById("quiz4.3Btn")
+    let button44 = document.getElementById("quiz4.4Btn")
+     // QUIZ SCREEN FIVE ELEMENT WITH SCREEN FIVE BUTTONS
+let quizScreen5 = document.getElementById("quizPage5");
+    let button51 = document.getElementById("quiz5.1Btn")
+    let button52 = document.getElementById("quiz5.2Btn")
+    let button53 = document.getElementById("quiz5.3Btn")
+    let button54 = document.getElementById("quiz5.4Btn")
+
+quizScreen1.style.display = "none";
+quizScreen2.style.display = "none";
+quizScreen3.style.display = "none";
+quizScreen4.style.display = "none";
+quizScreen5.style.display = "none";
 
 // RUNS TIMER AFTER START BUTTON IS CLICKED
 
 startBtn.addEventListener("click", function () {  
     if (startBtn) {
-        setInterval(addTimer, 1000);
+        setInterval(addTimer, 10000);
         startScreen.style.display = "none";
-        quizPage();
+        quizPage1();
     }
 })
 
@@ -28,9 +62,105 @@ function addTimer() {
     }
 }
 
- function quizPage() {
-    quizScreen.style.display = "block";
+ function quizPage1() {
+    quizScreen1.style.display = "block";
+    if (button11.addEventListener ("click", function() {
+        quizScreen1.style.display = "none";
+        quizPage2();
+    }));
+    if (button12.addEventListener ("click", function() {
+        quizScreen1.style.display = "none";
+        quizPage2();
+    }));
+    if (button13.addEventListener ("click", function() {
+        quizScreen1.style.display = "none";
+        quizPage2();
+    }));
+    if (button14.addEventListener ("click", function() {
+        quizScreen1.style.display = "none";
+        quizPage2();
+    }));
  }
+
+ function quizPage2 () {
+     quizScreen2.style.display = "block";
+     if (button21.addEventListener ("click", function() {
+        quizScreen2.style.display = "none";
+        quizPage3();
+    }));
+    if (button22.addEventListener ("click", function() {
+        quizScreen2.style.display = "none";
+        quizPage3();
+    }));
+    if (button23.addEventListener ("click", function() {
+        quizScreen2.style.display = "none";
+        quizPage3();
+    }));
+    if (button24.addEventListener ("click", function() {
+        quizScreen2.style.display = "none";
+        quizPage3();
+    }));
+ }
+
+ function quizPage3 () {
+    quizScreen3.style.display = "block";
+    if (button31.addEventListener ("click", function() {
+       quizScreen3.style.display = "none";
+       quizPage4();
+   }));
+   if (button32.addEventListener ("click", function() {
+       quizScreen3.style.display = "none";
+       quizPage4();
+   }));
+   if (button33.addEventListener ("click", function() {
+       quizScreen3.style.display = "none";
+       quizPage4();
+   }));
+   if (button34.addEventListener ("click", function() {
+       quizScreen3.style.display = "none";
+       quizPage4();
+   }));
+}
+
+function quizPage4 () {
+    quizScreen4.style.display = "block";
+    if (button41.addEventListener ("click", function() {
+       quizScreen4.style.display = "none";
+       quizPage5();
+   }));
+   if (button42.addEventListener ("click", function() {
+       quizScreen4.style.display = "none";
+       quizPage5();
+   }));
+   if (button43.addEventListener ("click", function() {
+       quizScreen4.style.display = "none";
+       quizPage5();
+   }));
+   if (button44.addEventListener ("click", function() {
+       quizScreen4.style.display = "none";
+       quizPage5();
+   }));
+}
+
+function quizPage5 () {
+    quizScreen5.style.display = "block";
+    if (button51.addEventListener ("click", function() {
+       quizScreen5.style.display = "none";
+       console.log("Hello World")
+   }));
+   if (button52.addEventListener ("click", function() {
+       quizScreen5.style.display = "none";
+       console.log("Hello World")
+   }));
+   if (button53.addEventListener ("click", function() {
+       quizScreen5.style.display = "none";
+       console.log("Hello World")
+   }));
+   if (button54.addEventListener ("click", function() {
+       quizScreen5.style.display = "none";
+       console.log("Hello World")
+   }));
+}
  // START QUIZ BUTTON ✅
     // a. upon clicking timer will start counting down ✅
     // b. upon clicking everything will dissapear except the header ✅
