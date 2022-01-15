@@ -10,10 +10,10 @@
   <body>
     <header>
       <div class="highscores">view highscores</div>
-      <div class="time">Time: 75</div>
+      <div class="time" id="countdown">Time: 75</div>
     </header>
-    <div class="container">
-      <div class="start-page">
+    <div class="container" >
+      <div class="start-page" id="startPage">
         <h1 class="title">Coding Quiz Challenege</h1>
         <p class="info-section">
           Try to answer the code related questions within the time limit. Keep
@@ -27,30 +27,28 @@
           Have fun and may the best dev win!
         </p>
         <div class="start-btn">
-          <button class="btn" type="button">Start!</button>
+          <button class="btn" type="button" id="startBtn">Start!</button>
         </div>
       </div>
 
-      <div class="quiz-page">
+      <div class="quiz-page" id="quizPage">
         <br />
 
-        <div class="quiz-qestion"></div>
-
-        <br />
-
-        <div class="quiz-buttons"></div>
+        <div class="quiz-qestion">QUESTION</div>
 
         <br />
 
-        <div class="RW-prompt">
+        <div class="quiz-buttons">BUTTONS</div>
+
+        <br />
+
+        <div class="RW-prompt">wrong
           <div class="score-screen"></div>
         </div>
 
         <div class="end-screen">
           <div id="allDone"></div>
           <div id="yourscore"></div>
-          <div id="correct"></div>
-          <div id="incorrect"></div>
           <br />
           <!-- <div id="scorecard">
             <input
@@ -62,7 +60,7 @@
             <button class="btn" value="submit">Submit</button>
           </div> -->
         </div>
-      </div>
+      </div> 
     </div>
     <script src="assets/game.js"></script>
   </body>
