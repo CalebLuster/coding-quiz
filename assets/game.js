@@ -35,17 +35,33 @@ let quizScreen5 = document.getElementById("quizPage5");
     let button53 = document.getElementById("quiz5.3Btn")
     let button54 = document.getElementById("quiz5.4Btn")
 
+let wrongPrompt = document.getElementById("wrong");
+let rightPrompt = document.getElementById("right");
+
+let endScreen = document.getElementById("endscreen");
+let yourScore = document.getElementById("yourscore");
+let submitButton = document.getElementById("submitBtn");
+
+let highScore = document.getElementById("highscore");
+let scoreInputs = document.getElementById("scoreinputs");
+
 quizScreen1.style.display = "none";
 quizScreen2.style.display = "none";
 quizScreen3.style.display = "none";
 quizScreen4.style.display = "none";
 quizScreen5.style.display = "none";
 
+wrongPrompt.style.display = "none";
+rightPrompt.style.display = "none";
+
+endScreen.style.display = "none";
+
+highScore.style.display = "none";
 // RUNS TIMER AFTER START BUTTON IS CLICKED
 
 startBtn.addEventListener("click", function () {  
     if (startBtn) {
-        setInterval(addTimer, 10000);
+        setInterval(addTimer, 100);
         startScreen.style.display = "none";
         quizPage1();
     }
@@ -59,7 +75,8 @@ function addTimer() {
     clock.innerHTML = timer;
     while (timer === stopper) {
         clearInterval(addTimer);
-    }
+        scoreScreen();
+    };
 }
 
  function quizPage1() {
@@ -83,6 +100,7 @@ function addTimer() {
  }
 
  function quizPage2 () {
+    
      quizScreen2.style.display = "block";
      if (button21.addEventListener ("click", function() {
         quizScreen2.style.display = "none";
@@ -103,6 +121,7 @@ function addTimer() {
  }
 
  function quizPage3 () {
+    
     quizScreen3.style.display = "block";
     if (button31.addEventListener ("click", function() {
        quizScreen3.style.display = "none";
@@ -123,6 +142,7 @@ function addTimer() {
 }
 
 function quizPage4 () {
+    
     quizScreen4.style.display = "block";
     if (button41.addEventListener ("click", function() {
        quizScreen4.style.display = "none";
@@ -143,23 +163,40 @@ function quizPage4 () {
 }
 
 function quizPage5 () {
+    
     quizScreen5.style.display = "block";
     if (button51.addEventListener ("click", function() {
        quizScreen5.style.display = "none";
-       console.log("Hello World")
+       scoreScreen();
    }));
    if (button52.addEventListener ("click", function() {
        quizScreen5.style.display = "none";
-       console.log("Hello World")
+       scoreScreen();
    }));
    if (button53.addEventListener ("click", function() {
        quizScreen5.style.display = "none";
-       console.log("Hello World")
+       scoreScreen();
    }));
    if (button54.addEventListener ("click", function() {
        quizScreen5.style.display = "none";
-       console.log("Hello World")
+       scoreScreen();
    }));
+        
+}
+
+function scoreScreen () {
+
+    endScreen.style.display = "block";
+    yourScore.innerHTML = timer;
+    if (submitButton.addEventListener("click", function () {
+        lastScreen();
+    }));
+}
+
+function lastScreen () {
+    highScore.style.display = "block";
+    endScreen.style.display = "none";
+    scoreInputs.innerHTML = timer;
 }
  // START QUIZ BUTTON ✅
     // a. upon clicking timer will start counting down ✅
@@ -168,15 +205,15 @@ function quizPage5 () {
 
 
 // QUIZ PAGE 
-    // a. Quiz questions appear 1 question and with 4 mutiple choice answers
+    // a. Quiz questions appear 1 question and with 4 mutiple choice answers✅
     // b. When answer is selected the user page will either display right or wrong
-    // c. when answer is selected the page will go to the next question.
+    // c. when answer is selected the page will go to the next question.✅
     // d. when all questions are answered or the time runs out next screen will appear on page
 
-// SCORECARD PAGE
-    // a. scorecard will show a message stating "all done" with the users score, correct questions, and incorrect questions.
-    // b. user will have a button and input field to put there name into
-    // upon clicking button user will be sent to the end screen
+// SCORECARD PAGE✅
+    // a. scorecard will show a message stating "all done" with the users score.✅
+    // b. user will have a button and input field to put there name into✅
+    // upon clicking button user will be sent to the end screen✅
 
 // HIGHSCORE PAGE
     //  a. the users name and score will be displayed

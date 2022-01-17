@@ -114,25 +114,28 @@
     <!-- RIGHT/WRONG SCREEN PROMPT -->
     <!-- RIGHT/WRONG SCREEN PROMPT -->
     <!-- RIGHT/WRONG SCREEN PROMPT -->
-    <div class="RW-prompt">
-      <div class="score-screen"></div>
-    </div>
+    <div class="RW-prompt" id="wrong">Wrong!</div>
+    <div class="RW-prompt" id="right">Correct!</div>
+    <div class="score-screen"></div>
 
-    <div class="end-screen">
-      <div id="allDone"></div>
-      <div id="yourscore"></div>
+    <div class="end-screen" id="endscreen">
+      <div class="done" id="allDone">All Done!</div>
+      <div class="score">
+        Here is your score:
+        <p id="yourscore"></p>
+        <br />
+      </div>
+      <input type="text" name="" id="initials" placeholder="Initials Here" />
       <br />
-      <!-- <div id="scorecard">
-            <input
-              type="text"
-              name="scorecard"
-              id="userName"
-              placeholder="Enter Name Here"
-            />
-            <button class="btn" value="submit">Submit</button>
-          </div> -->
+      <button class="btn" type="button" id="submitBtn">Submit!</button>
+      <br />
     </div>
-
+<div class="high-score" id="highscore">
+  <h2 class="highscore-title">Highscores</h2>
+  <div id="scoreinputs"></div>
+  <button class="btn" type="button" id="startBtn">Back</button>
+  <button class="btn" type="button" id="startBtn">Clear</button>
+</div>
     <script src="assets/game.js"></script>
   </body>
 </html>
