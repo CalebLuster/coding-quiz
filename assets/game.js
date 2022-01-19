@@ -46,7 +46,7 @@ let submitButton = document.getElementById("submitBtn");
 let highScore = document.getElementById("highscore");
 let scoreInputs = document.getElementById("scoreinputs");
 
-let nameInitials = document.getElementById("initials");
+let nameInitials = document.getElementById("initials").value;
 let backButton = document.getElementById("backBtn");
 let clearButton = document.getElementById("clearBtn");
 
@@ -273,6 +273,21 @@ function scoreScreen () {
     if (submitButton.addEventListener("click", function () {
         saveInitials();
         lastScreen();
+
+    }));
+}
+
+function viewHighscores () {
+    if (viewButton.addEventListener("click", function() {
+        startScreen.style.display = "none";
+        quizScreen1.style.display = "none";
+        quizScreen2.style.display = "none";
+        quizScreen3.style.display = "none";
+        quizScreen4.style.display = "none";
+        quizScreen5.style.display = "none";
+        lastScreen();
+        clearInterval(timerInterval);
+        clearPrompt();
     }));
 }
 
@@ -289,15 +304,11 @@ function lastScreen () {
     if (clearButton.addEventListener("click", function() {
         localStorage.removeItem("time");
         localStorage.removeItem("name");
-        yourScore.innerHTML = "";
+        
     }));
 }
 
-function viewHighscores () {
-    if (viewButton.addEventListener("click", function() {
-        lastScreen();
-    }));
-    }
+viewHighscores();
  // START QUIZ BUTTON ✅
     // a. upon clicking timer will start counting down ✅
     // b. upon clicking everything will dissapear except the header ✅
@@ -319,4 +330,4 @@ function viewHighscores () {
     //  a. the users name and score will be displayed
     //  b. a "back" button will take them back to the START QUIZ page✅
     //  c. a "reset" button will allow the user to clear all highscores stored.
-    //  d. a "view highscores button" will take them to the last screen.
+    //  d. a "view highscores button" will take them to the last screen.✅
