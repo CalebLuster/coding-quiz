@@ -9,7 +9,9 @@
   </head>
   <body>
     <header>
-      <div class="highscores">view highscores</div>
+      <button class="highscores" type="button" id="viewBtn">
+        view highscores
+      </button>
       <div class="time" id="countdown">Time: 75</div>
     </header>
     <!-- STARTING PAGE -->
@@ -130,12 +132,12 @@
       <button class="btn" type="button" id="submitBtn">Submit!</button>
       <br />
     </div>
-<div class="high-score" id="highscore">
-  <h2 class="highscore-title">Highscores</h2>
-  <div id="scoreinputs"></div>
-  <button class="btn" type="button" id="startBtn">Back</button>
-  <button class="btn" type="button" id="startBtn">Clear</button>
-</div>
+    <div class="high-score" id="highscore">
+      <div class="highscore-title" id="viewBtn">Highscores</div>
+      <div id="scoreinputs"></div>
+      <button class="btn" type="button" id="backBtn">Back</button>
+      <button class="btn" type="button" id="clearBtn">Clear</button>
+    </div>
     <script src="assets/game.js"></script>
   </body>
 </html>
