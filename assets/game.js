@@ -41,12 +41,13 @@ let rightPrompt = document.getElementById("right");
 
 let endScreen = document.getElementById("endscreen");
 let yourScore = document.getElementById("yourscore");
+let removeScore = document.getElementById("removescore")
 let submitButton = document.getElementById("submitBtn");
 
 let highScore = document.getElementById("highscore");
 let scoreInputs = document.getElementById("scoreinputs");
 
-let nameInitials = document.getElementById("initials").value;
+let nameInitials = document.getElementById("initials");
 let backButton = document.getElementById("backBtn");
 let clearButton = document.getElementById("clearBtn");
 
@@ -65,10 +66,62 @@ endScreen.style.display = "none";
 
 highScore.style.display = "none";
 
+button11.addEventListener ("click", function() {
+    timer = timer - 10;
+    quizScreen1.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage2();
+});
+button12.addEventListener ("click", function() {
+    timer = timer - 10;
+    quizScreen1.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage2();
+});
+button13.addEventListener ("click", function() {
+    quizScreen1.style.display = "none";
+    rightPrompt.style.display = "block";
+    quizPage2();
+});
+button14.addEventListener ("click", function() {
+    timer = timer - 10;
+    quizScreen1.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage2();
+});
+
+button21.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen2.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage3();
+});
+button22.addEventListener ("click", function() {
+    clearPrompt();
+    quizScreen2.style.display = "none";
+    rightPrompt.style.display = "block";
+    quizPage3();
+});
+button23.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen2.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage3();
+});
+button24.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen2.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage3();
+});
 // RUNS TIMER AFTER START BUTTON IS CLICKED
 
 startBtn.addEventListener("click", function () {  
-    
+    button11.removeEventListener("click", function () {}) 
+    timer = 75;
     if (startBtn) {
         timerInterval = setInterval(addTimer, 1000);
         startScreen.style.display = "none";
@@ -76,12 +129,96 @@ startBtn.addEventListener("click", function () {
     }
 })
 
+button31.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen3.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage4();
+});
+button32.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen3.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage4();
+});
+button33.addEventListener ("click", function() {
+    clearPrompt();  
+    timer = timer - 10;
+    quizScreen3.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage4();
+});
+button34.addEventListener ("click", function() {
+    clearPrompt();
+    quizScreen3.style.display = "none";
+    rightPrompt.style.display = "block";
+    quizPage4();
+});
+
+button41.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen4.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage5();
+});
+button42.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen4.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage5();
+});
+button43.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen4.style.display = "none";
+    wrongPrompt.style.display = "block";
+    quizPage5();
+});
+button44.addEventListener ("click", function() {
+    clearPrompt();
+    quizScreen4.style.display = "none";
+    rightPrompt.style.display = "block";
+    quizPage5();
+});
+
+button51.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen5.style.display = "none";
+    wrongPrompt.style.display = "block";
+    scoreScreen();
+});
+button52.addEventListener ("click", function() {
+    clearPrompt();
+    quizScreen5.style.display = "none";
+    rightPrompt.style.display = "block";
+    scoreScreen();
+});
+button53.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen5.style.display = "none";
+    wrongPrompt.style.display = "block";
+    scoreScreen();
+});
+button54.addEventListener ("click", function() {
+    clearPrompt();
+    timer = timer - 10;
+    quizScreen5.style.display = "none";
+    wrongPrompt.style.display = "block";
+    scoreScreen();
+    
+});
 // FUNCTION TO GET TIMER TO RUN
 
 function addTimer() {
     timer = timer - 1;
     let clock = document.getElementById("countdown")
-    clock.innerHTML = timer;
+    clock.innerHTML = `Time: ${timer}`;
     if (timer === stopper) {
         scoreScreen();
     };
@@ -96,165 +233,39 @@ function clearPrompt () {
 
  function quizPage1() {
     quizScreen1.style.display = "block";
-    if (button11.addEventListener ("click", function() {
-        timer = timer - 10;
-        quizScreen1.style.display = "none";
-        wrongPrompt.style.display = "block";
-        quizPage2();
-    }));
-    if (button12.addEventListener ("click", function() {
-        timer = timer - 10;
-        quizScreen1.style.display = "none";
-        wrongPrompt.style.display = "block";
-        quizPage2();
-    }));
-    if (button13.addEventListener ("click", function() {
-        quizScreen1.style.display = "none";
-        rightPrompt.style.display = "block";
-        quizPage2();
-    }));
-    if (button14.addEventListener ("click", function() {
-        timer = timer - 10;
-        quizScreen1.style.display = "none";
-        wrongPrompt.style.display = "block";
-        quizPage2();
-    }));
+    
  }
 
  function quizPage2 () {
     
      quizScreen2.style.display = "block";
-     if (button21.addEventListener ("click", function() {
-        clearPrompt();
-        timer = timer - 10;
-        quizScreen2.style.display = "none";
-        wrongPrompt.style.display = "block";
-        quizPage3();
-    }));
-    if (button22.addEventListener ("click", function() {
-        clearPrompt();
-        quizScreen2.style.display = "none";
-        rightPrompt.style.display = "block";
-        quizPage3();
-    }));
-    if (button23.addEventListener ("click", function() {
-        clearPrompt();
-        timer = timer - 10;
-        quizScreen2.style.display = "none";
-        wrongPrompt.style.display = "block";
-        quizPage3();
-    }));
-    if (button24.addEventListener ("click", function() {
-        clearPrompt();
-        timer = timer - 10;
-        quizScreen2.style.display = "none";
-        wrongPrompt.style.display = "block";
-        quizPage3();
-    }));
+     
  }
 
  function quizPage3 () {
     
     quizScreen3.style.display = "block";
-    if (button31.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen3.style.display = "none";
-       wrongPrompt.style.display = "block";
-       quizPage4();
-   }));
-   if (button32.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen3.style.display = "none";
-       wrongPrompt.style.display = "block";
-       quizPage4();
-   }));
-   if (button33.addEventListener ("click", function() {
-       clearPrompt();  
-       timer = timer - 10;
-       quizScreen3.style.display = "none";
-       wrongPrompt.style.display = "block";
-       quizPage4();
-   }));
-   if (button34.addEventListener ("click", function() {
-       clearPrompt();
-       quizScreen3.style.display = "none";
-       rightPrompt.style.display = "block";
-       quizPage4();
-   }));
+    
 }
 
 function quizPage4 () {
     
     quizScreen4.style.display = "block";
-    if (button41.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen4.style.display = "none";
-       wrongPrompt.style.display = "block";
-       quizPage5();
-   }));
-   if (button42.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen4.style.display = "none";
-       wrongPrompt.style.display = "block";
-       quizPage5();
-   }));
-   if (button43.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen4.style.display = "none";
-       wrongPrompt.style.display = "block";
-       quizPage5();
-   }));
-   if (button44.addEventListener ("click", function() {
-       clearPrompt();
-       quizScreen4.style.display = "none";
-       rightPrompt.style.display = "block";
-       quizPage5();
-   }));
+    
 }
 
 function quizPage5 () {
     
     quizScreen5.style.display = "block";
-    if (button51.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen5.style.display = "none";
-       wrongPrompt.style.display = "block";
-       scoreScreen();
-   }));
-   if (button52.addEventListener ("click", function() {
-       clearPrompt();
-       quizScreen5.style.display = "none";
-       rightPrompt.style.display = "block";
-       scoreScreen();
-   }));
-   if (button53.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen5.style.display = "none";
-       wrongPrompt.style.display = "block";
-       scoreScreen();
-   }));
-   if (button54.addEventListener ("click", function() {
-       clearPrompt();
-       timer = timer - 10;
-       quizScreen5.style.display = "none";
-       wrongPrompt.style.display = "block";
-       scoreScreen();
-       
-   }));
+    
         
 }
 
 function saveInitials () {
     if (timer > localStorage.getItem("time")) {
     localStorage.setItem("time", timer);
-    localStorage.setItem("name", nameInitials);
+    localStorage.setItem("name", nameInitials.value);
+    
     }
 }
 
@@ -269,16 +280,16 @@ function scoreScreen () {
     quizScreen4.style.display = "none";
     quizScreen5.style.display = "none";
     endScreen.style.display = "block";
-    yourScore.innerHTML = timer;
-    if (submitButton.addEventListener("click", function () {
+    yourScore.innerHTML = timer
+    submitButton.addEventListener("click", function () {
         saveInitials();
         lastScreen();
 
-    }));
+    });
 }
 
 function viewHighscores () {
-    if (viewButton.addEventListener("click", function() {
+    viewButton.addEventListener("click", function() {
         startScreen.style.display = "none";
         quizScreen1.style.display = "none";
         quizScreen2.style.display = "none";
@@ -288,24 +299,22 @@ function viewHighscores () {
         lastScreen();
         clearInterval(timerInterval);
         clearPrompt();
-    }));
+    });
 }
 
 function lastScreen () {
     highScore.style.display = "block";
     endScreen.style.display = "none";
-    scoreInputs.innerHTML = localStorage.getItem("time")
-    nameInitials.innerHTML = localStorage.getItem("name")
-    if (backButton.addEventListener("click", function() {
+    scoreInputs.innerHTML = localStorage.getItem("time") === null || localStorage.getItem("name") === null ? "" : `${localStorage.getItem("name")} - ${localStorage.getItem("time")}`;
+    backButton.addEventListener("click", function() {
         highScore.style.display = "none";
         startScreen.style.display = "block";
-        timer = 75;
-    }));
-    if (clearButton.addEventListener("click", function() {
-        localStorage.removeItem("time");
+    });
+    clearButton.addEventListener("click", function() {
+        localStorage.removeItem("time", timer);
         localStorage.removeItem("name");
-        
-    }));
+        yourScore.innerHTML
+    });
 }
 
 viewHighscores();
@@ -326,8 +335,8 @@ viewHighscores();
     // b. user will have a button and input field to put there name into✅
     // upon clicking button user will be sent to the end screen✅
 
-// HIGHSCORE PAGE
-    //  a. the users name and score will be displayed
+// HIGHSCORE PAGE✅
+    //  a. the users name and score will be displayed✅
     //  b. a "back" button will take them back to the START QUIZ page✅
-    //  c. a "reset" button will allow the user to clear all highscores stored.
+    //  c. a "reset" button will allow the user to clear all highscores stored.✅
     //  d. a "view highscores button" will take them to the last screen.✅
